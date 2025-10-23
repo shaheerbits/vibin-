@@ -1,5 +1,6 @@
 // Globals
 import express from 'express';
+import cors from 'cors';
 
 // Util Imports
 import connectToMongoDB from './db/connectToMongoDB.js';
@@ -13,6 +14,7 @@ const PORT = 3000;
 
 // Middlewares
 app.use(express.json());
+app.use(cors());
 
 // Connecting to MongoDB
 await connectToMongoDB();
